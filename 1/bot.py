@@ -1,5 +1,4 @@
 from Piscord import *
-from SAPAS import *
 
 bot = Bot("Token")
 
