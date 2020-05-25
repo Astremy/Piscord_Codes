@@ -3,6 +3,8 @@ from SAPAS import *
 import os
 import json
 
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = 'true'
+
 quiz = [
 	["Quel est votre age ?",["🚸","👦","👨‍🎓","👨‍💼"],["- 13 ans", "13 - 18 ans", "18 - 25 ans","+ 25 ans"]],
 	["Comment qualifieriez-vous votre niveau en programmation ?",["⬇️","↘️","➡️","↗️","⬆️"],["Très bas", "Assez Bas", "Moyen", "Assez élevé", "Très élevé"]],
@@ -90,9 +92,9 @@ def reaction_add(reaction):
 
 bot.start()
 
-site = Server("0.0.0.0",635)
+site = Server("0.0.0.0",80)
 
-auth = OAuth(bot,"c-EcG3x4ns6Qo0ES1kZDwR4-820kg7Nj","https://concours.astremy.com/connect","identify")
+auth = OAuth(bot,"Secret","http://localhost/connect","identify")
 
 @site.path("/")
 def liste(user):
