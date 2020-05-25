@@ -12,7 +12,7 @@ quiz = [
 with open("participants.json","r") as file:
 	people = json.loads(file.read())
 
-bot = Bot("NzEyNjgzNTQ1MDg0Mjk3Mjg4.XsVIYQ.qq9T7sYYR1B69Ytd9QeRvNiwEFU",api_sleep=0.1)
+bot = Bot("Token",api_sleep=0.1)
 
 toggle = [True]
 
